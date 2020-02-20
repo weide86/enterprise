@@ -57,15 +57,15 @@
             <a href="<%=path%>/service">
                 <div>
                     <h3>服务领域</h3>
-                    <p>别墅装修，校区装修</p>
+                    <p>环境影响，生态规划</p>
                 </div>
             </a>
         </li>
         <li class="banners_li">
             <a href="<%=path%>/article">
                 <div>
-                    <h3>新闻动态</h3>
-                    <p>公司动态，行业新闻</p>
+                    <h3>环保公示</h3>
+                    <p>环保公示，及时查看</p>
                 </div>
             </a>
         </li>
@@ -73,7 +73,7 @@
             <a href="<%=path%>/about">
                 <div>
                     <h3>关于我们</h3>
-                    <p>了解我们，了解华宇</p>
+                    <p>了解我们，了解公司</p>
                 </div>
             </a>
         </li>

@@ -179,7 +179,9 @@ a{
     width: 1000px;
     color: #777777;
     line-height: 45px;
-    padding-left: 20px;
+    /*padding-left: 20px;*/
+    text-align: center;
+
 }
 .message_input{
     padding: 6px 3px;

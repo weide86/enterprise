@@ -11,7 +11,7 @@
 <%@include file="/front/common/common.jsp" %>
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/banner.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/b41.jpg)">
 
 </div>
 <div class="warp_main">
@@ -47,16 +47,19 @@
             <div class="article_content">
                 <%
                     for (Service ac : SystemManage.getInstance().getService()) {
-                        System.out.println(id);
-                        if ((String.valueOf(ac.getId())).equals(id)) {
+                        System.out.println("88888888---"+id);
+                        System.out.println("99999999---"+ac.getId());
+                        if(id==null){
+                %>
+                        <%=ac.getContentHtml()%>
+                <%
+                    break;
+                        }else if ((String.valueOf(ac.getId())).equals(id)) {
                 %>
                         <%=ac.getContentHtml()%>
                 <%
                             break;
-                        }else{%>
-                <%=ac.getContentHtml()%>
-                <% break;
-                            }
+                        }
                     }
                 %>
             </div>
