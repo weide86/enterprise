@@ -60,9 +60,9 @@
             <li>
                 <a href="<%=path%>/recruitment">诚聘英才</a>
             </li>
-            <li>
-                <a href="<%=path%>/message">在线留言</a>
-            </li>
+            <%--<li>--%>
+                <%--<a href="<%=path%>/message">在线留言</a>--%>
+            <%--</li>--%>
             <li>
                 <a href="<%=path%>/contact">联系我们</a>
             </li>
