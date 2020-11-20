@@ -12,18 +12,20 @@
 <style>
     #index-banner {
         position: relative;
-        height: 481px;
+        height: 421px;
     }
     .swiper-container {
         position: absolute;
-        height: 481px;
-        width: 100%;
+        height: 421px;
+        width: 1200px;
+        margin-left: 350px;
     }
     .swiper-slide {
         background-position: center 0;
         background-repeat: no-repeat;
         box-sizing: content-box;
         float: left;
+
     }
     .swiper-pagination-bullet {
         margin: 1px;

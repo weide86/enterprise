@@ -2,15 +2,7 @@ package com.enterprise.core;
 
 import com.enterprise.cache.CacheProvider;
 import com.enterprise.cache.SimpleCacheProvider;
-import com.enterprise.entity.About;
-import com.enterprise.entity.ArticleCategory;
-import com.enterprise.entity.Contact;
-import com.enterprise.entity.FriendLinks;
-import com.enterprise.entity.IndexImg;
-import com.enterprise.entity.Messages;
-import com.enterprise.entity.Recruitment;
-import com.enterprise.entity.Service;
-import com.enterprise.entity.SystemSetting;
+import com.enterprise.entity.*;
 import org.apache.commons.lang.StringUtils;
 
 import javax.annotation.PostConstruct;
@@ -114,6 +106,16 @@ public class SystemManage {
     public void setArticleCategory(List<ArticleCategory> articleCategory){
         putCacheObject("articleCategory",(Serializable)(articleCategory));
     }
+
+    //文章
+    public List<Article> getArticle(){
+        return getCacheObject("article");
+    }
+//    public void setArticle(List<Article> article){
+//        putCacheObject("article",(Serializable)(article));
+//    }
+    public void setArticle(List<Article> article){putCacheObject("article",(Serializable)(article));}
+
     //联系我们
     public List<Contact> getContact(){
         return getCacheObject("contacts");

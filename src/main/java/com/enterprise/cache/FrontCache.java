@@ -28,6 +28,8 @@ public class FrontCache implements ServletContextAware {
 	@Autowired
 	private ArticleCategoryService articleCategoryService;
 	@Autowired
+	private ArticleService articleService;
+	@Autowired
 	private ContactService contactService;
 	@Autowired
 	private AboutService aboutService;
@@ -55,6 +57,7 @@ public class FrontCache implements ServletContextAware {
 		loadRecruitments();
 		loadIndexImg();
         loadMessage();
+		loadArticle();
 		loadArticleCategroy();
 		loadContact();
 		loadAbout();
@@ -130,7 +133,21 @@ public class FrontCache implements ServletContextAware {
 		articleCategoryLIst = articleCategoryService.selectList(new ArticleCategory());
 		systemManage.setArticleCategory(articleCategoryLIst);
 	}
+	/**
+	 * 加载文章
+	 * @throws Exception
+	 */
+	public void loadArticle() throws Exception{
+//		List<Article> articleLIst = new ArrayList<Article>();
+//		articleLIst = articleService.selectList(new Article());
+//		systemManage.setArticle(articleLIst);
 
+		Article article = new Article();
+		article.setOffset(0);
+		article.setPageSize(5);
+		PageModel page = articleService.selectPageList(article);
+		systemManage.setArticle(page.getList());
+	}
 	/**
 	 * 加载联系我们
 	 * @throws Exception

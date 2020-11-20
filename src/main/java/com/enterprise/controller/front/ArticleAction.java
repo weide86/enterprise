@@ -70,7 +70,46 @@ public class ArticleAction extends BaseController<Article>{
         request.setAttribute("pager", page);
         return page_toList;
     }
+    /**
+     * 跳转到文章列表
+     * @param request
+     * @param article
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("indexArticle/{code}")
+    public String indexArticle(HttpServletRequest request,@ModelAttribute("code")@PathVariable("code") String code,@ModelAttribute("e") Article article, ModelMap model) throws Exception {
 
+
+        for(ArticleCategory item: SystemManage.getInstance().getArticleCategory()){ //遍历分类缓存
+            if(code.equals(item.getCode())){        //当编码相等时
+                article.setCategoryId(String.valueOf(item.getId()));    //把相等编码里的分类id值赋予文章中catagroyId中
+                break;  //跳出循环
+            }
+        }
+        setParamWhenInitQuery(article);
+        int offset = 0;
+        if(request.getParameter("pager.offset")!=null){
+            offset = Integer.parseInt(request.getParameter("pager.offset"));
+        }
+        if(offset < 0){
+            offset=0;
+        }
+        article.setOffset(offset);
+        article.setPageSize(5);
+        PageModel page = getService().selectPageList(article);
+        if(page == null){
+            page = new PageModel();
+        }
+        page.setPageSize(5);    //设置单页数据为10
+        page.setPagerSize((page.getTotal() + page.getPageSize() - 1)
+                / page.getPageSize());
+        selectListAfter(page);
+        page.setPagerUrl(code);
+        request.setAttribute("pager", page);
+        request.setAttribute("code", code);
+        return "/front/index";
+    }
 
     /**
      * 文章详情
@@ -85,17 +124,17 @@ public class ArticleAction extends BaseController<Article>{
             Article e = articleService.selectById(Integer.parseInt(code));
             e.setHit(String.valueOf(Integer.parseInt(e.getHit())+1));
             articleService.update(e);       //更新浏览量     --优化建议：可使用缓存或者redis暂存  然后再刷入数据库
-            Article next = articleService.selectNext(Integer.parseInt(code));
-            if(next==null){
-                next = new Article();
-            }
-            Article previous = articleService.selectPrevious(Integer.parseInt(code));
-            if(previous==null){
-                previous = new Article();
-            }
+//            Article next = articleService.selectNext(Integer.parseInt(code));
+//            if(next==null){
+//                next = new Article();
+//            }
+//            Article previous = articleService.selectPrevious(Integer.parseInt(code));
+//            if(previous==null){
+//                previous = new Article();
+//            }
             model.addAttribute("e", e);
-            model.addAttribute("next", next);
-            model.addAttribute("previous", previous);
+//            model.addAttribute("next", next);
+//            model.addAttribute("previous", previous);
             return page_toEdit;
         }else{//不是数字，则为分类编码
             for(ArticleCategory item: SystemManage.getInstance().getArticleCategory()){ //遍历分类缓存

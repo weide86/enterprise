@@ -5,18 +5,19 @@ body{
 }
 a{
     text-decoration: none;
-    color: #333333;
+    color: #777777;
 }
 .banner {
-    width: 100%;
-    height: 300px;
+    width: 1200px;
+    height: 50px;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 20px;
+    margin-left: 350px;
 }
 
 .warp_main{
-    width:1100px;
+    width:1200px;
     min-height: 450px;
     margin:0 auto;
     overflow: hidden;
@@ -27,7 +28,7 @@ a{
     float: left;
 }
 .warp_right{
-    width:860px;
+    width:960px;
     float: right;
 }
 .warp_left_box{
@@ -37,13 +38,13 @@ a{
     overflow: hidden;
 }
 .warp_left_box .active{
-    background-color: #AFAFAF;
+    background-color: #FFB800;
 }
 .warp_left_box .active a{
     color: #ffffff;
 }
 .warp_left_box h3{
-    background: #8f8f8f;
+    background: #FFB800;
     height: 88px;
     line-height: 88px;
     color: #fff;
@@ -74,7 +75,7 @@ a{
     width: 220px;
 }
 .warp_left_box ul li:hover{
-    background-color: #AFAFAF;
+    background-color: #FFB800;
 }
 .warp_left_box ul li a:hover{
     color: #ffffff;

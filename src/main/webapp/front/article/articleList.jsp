@@ -11,16 +11,29 @@
          pageEncoding="UTF-8" %>
 
 <%@include file="/front/common/common.jsp" %>
+<style>
 
+    .photo{
+        width:130px;
+        height: 110px;
+        float:left;
+        margin-right: 20px;
+    }
+    .photo img{
+        width:100%;
+        height: 100%;
+    }
+
+</style>
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/b41.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/911.jpg)">
 
 </div>
 <div class="warp_main">
     <div class="warp_left">
         <div class="warp_left_box">
-            <h3>环保公示</h3>
+            <h3>信息分类</h3>
             <ul>
                 <c:forEach var="item" items="<%=SystemManage.getInstance().getArticleCategory()%>">
                     <li <c:if test="${!empty code && code eq item.code}">class="active"</c:if> ><a href="<%=path%>/article/${item.code}">${item.catename}</a></li>
@@ -32,7 +45,7 @@
         <div class="breadcrumb">
             <a href="<%=path%>/index">首页</a>
             >
-            <a href="<%=path%>/article">环保公示</a>
+            <a href="<%=path%>/article">信息分类</a>
           <%
                 String code = (String)request.getAttribute("code");
                 if (code != null && code.length() != 0 ) {
@@ -50,7 +63,10 @@
         </div>
         <div style="overflow: hidden;">
             <c:forEach var="item" items="${pager.list}">
-                <div class="article_item">
+                <div class="photo">
+                    <img src="http://wwww.cctin.com${item.image}"/>
+                </div>
+                <div class="article_item" >
                     <h2><a href="<%=path%>/article/${item.id}">${item.title}</a></h2>
                     <p class="article_item_message">
                             ${item.createtime} | 分类：${item.catename} | 浏览量：${item.hit}

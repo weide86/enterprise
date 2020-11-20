@@ -19,8 +19,8 @@
         line-height: 107px;
         font-size: 17px;
         color: #262626;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin-left: 8px;
+        margin-right: 8px;
         text-align: center;
     }
     .nav li a {
@@ -36,14 +36,15 @@
 
     }
 </style>
-<div style="width:1100px;height: 107px;margin: 0 auto;">
-    <div style="width: 201px;height: 107px;float: left;">
-        <a href="index">
+<div style="width:1200px;height: 107px;margin: 0 auto;">
+    <div style="width: 200px;height: 107px;float: left;margin-top: 10px;">
+        <a href="">
         <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %><%=SystemManage.getInstance().getSystemSetting().getLogo() %>"
-             width="201" height="107"/>
+             width="201" height="70"/>
             </a>
     </div>
-    <div style="width: 768px;height: 107px;float: right;overflow: hidden">
+    <div style="width: 1000px;height: 107px;float: right;overflow: hidden">
+        <%--<div style="width: 768px;height: 107px;float: right;overflow: hidden">--%>
         <ul class="nav">
             <li>
                 <a href="<%=path%>/index">首 页</a>
@@ -52,20 +53,30 @@
                 <a href="<%=path%>/about">关于我们</a>
             </li>
             <li>
-                <a href="<%=path%>/service">服务领域</a>
-            </li>
-            <li>
-                <a href="<%=path%>/article">环保公示</a>
-            </li>
-            <li>
-                <a href="<%=path%>/recruitment">诚聘英才</a>
-            </li>
-            <%--<li>--%>
-                <%--<a href="<%=path%>/message">在线留言</a>--%>
-            <%--</li>--%>
-            <li>
                 <a href="<%=path%>/contact">联系我们</a>
             </li>
+            <li>
+                <a href="<%=path%>/article/FangWuXinXi">房屋信息</a>
+            </li>
+            <li>
+                <a href="<%=path%>/article/JiaZhengFuWu">家政服务</a>
+            </li>
+            <li>
+                <a href="<%=path%>/article/QiCheFuWu">汽车服务</a>
+            </li>
+            <li>
+                <a href="<%=path%>/article/ErShouShiChang">二手市场</a>
+            </li>
+            <li>
+                <a href="http://wwww.cctin.com/front/common/register.html" target="_blank">发布信息</a>
+            </li>
+            <li style="width:110px;">
+                <a href="http://wwww.cctin.com/front/common/zhidu.html" target="_blank">信息审核制度</a>
+            </li>
+            <li>
+                <a href="http://wwww.cctin.com/front/common/login.html" target="_blank">登录</a>
+            </li>
+
         </ul>
     </div>
 </div>

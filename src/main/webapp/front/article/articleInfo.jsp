@@ -12,7 +12,7 @@
 
 <body>
 <%@include file="/front/common/navigation.jsp" %>
-<div class="banner" style="background-image: url(<%=path%>/resource/images/b41.jpg)">
+<div class="banner" style="background-image: url(<%=path%>/resource/images/911.jpg)">
 
 </div>
 <div class="warp_main">
@@ -28,9 +28,9 @@
     </div>
     <div class="warp_right">
         <div class="breadcrumb">
-            <a href="<%=path%>/index">首页</a>
+            <a href="<%=path%>/index">信息内容</a>
             >
-            <a href="<%=path%>/article">环保公示</a>
+            <a href="<%=path%>/article">信息展示</a>
             >
             <a href="<%=path%>/article?categoryId=${e.categoryId}">${e.catename}</a>
         </div>
@@ -45,12 +45,12 @@
                     ${e.content}
                 </span>
 
-                <div class="bdsharebuttonbox" style="margin-top: 30px;"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-                <script>
-                    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-                </script>
-                <div class="previous">上一篇：<c:choose><c:when test="${previous.id != 0}"><a href="<%=path%>/article/${previous.id}">${previous.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>
-                <div class="next">下一篇：<c:choose><c:when test="${next.id != 0}"><a href="<%=path%>/article/${next.id}">${next.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>
+                <%--<div class="bdsharebuttonbox" style="margin-top: 30px;"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>--%>
+                <%--<script>--%>
+                    <%--with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];--%>
+                <%--</script>--%>
+                <%--<div class="previous">上一篇：<c:choose><c:when test="${previous.id != 0}"><a href="<%=path%>/article/${previous.id}">${previous.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>--%>
+                <%--<div class="next">下一篇：<c:choose><c:when test="${next.id != 0}"><a href="<%=path%>/article/${next.id}">${next.title}</a></c:when><c:otherwise>没有了</c:otherwise></c:choose></div>--%>
             </div>
         </div>
     </div>

@@ -118,7 +118,7 @@
         <ul>
             <li class="inpLi"><b>用户名：</b><input type="text" name="username" id="username" class="inpLogin"
                                                 placeholder="账号" value="admin"/></li>
-            <li class="inpLi"><b>密码：</b><input type="password" name="password" id="password" class="inpLogin" value="123456"
+            <li class="inpLi"><b>密码：</b><input type="password" name="password" id="password" class="inpLogin" value=""
                                                placeholder="密码"/></li>
             <li class="captchaPic">
                 <div class="inpLi" style="overflow: hidden;width: 236px;float: left;"><b>验证码：</b><input name="manage_vcode" type="text" class="captcha"></div>

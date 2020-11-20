@@ -20,7 +20,9 @@
     <%--</div>--%>
     <div class="foot_bottom">
         <p> Copyright
-            2020-2030 <%=SystemManage.getInstance().getSystemSetting().getTitle()%> <%=SystemManage.getInstance().getSystemSetting().getIcp()%>
+            2020-2030 山东中时通电子商务有限公司
+            <a target="blank" href="http://beian.miit.gov.cn">网站备案号：鲁ICP备14013284号-2</a>
+
         </p>
     </div>
 </div>
