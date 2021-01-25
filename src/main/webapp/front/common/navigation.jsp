@@ -68,13 +68,13 @@
                 <a href="<%=path%>/article/ErShouShiChang">二手市场</a>
             </li>
             <li>
-                <a href="http://wwww.cctin.com/front/common/register.html" target="_blank">发布信息</a>
+                <a href="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/front/common/register.html" target="_blank">发布信息</a>
             </li>
             <li style="width:110px;">
-                <a href="http://wwww.cctin.com/front/common/zhidu.html" target="_blank">信息审核制度</a>
+                <a href="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/front/common/zhidu.html" target="_blank">信息审核制度</a>
             </li>
             <li>
-                <a href="http://wwww.cctin.com/front/common/login.html" target="_blank">登录</a>
+                <a href="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>/front/common/login.html" target="_blank">登录</a>
             </li>
 
         </ul>

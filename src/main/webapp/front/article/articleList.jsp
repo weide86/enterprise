@@ -64,7 +64,7 @@
         <div style="overflow: hidden;">
             <c:forEach var="item" items="${pager.list}">
                 <div class="photo">
-                    <img src="http://wwww.cctin.com${item.image}"/>
+                    <img src="<%=SystemManage.getInstance().getSystemSetting().getImageRootPath() %>${item.image}"/>
                 </div>
                 <div class="article_item" >
                     <h2><a href="<%=path%>/article/${item.id}">${item.title}</a></h2>
