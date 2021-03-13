@@ -23,7 +23,7 @@
             2020-2030 山东中时通电子商务有限公司
             <a target="blank" href="http://beian.miit.gov.cn">网站备案号：鲁ICP备14013284号-2</a>&nbsp
             <a target="blank" href="http://www.beian.gov.cn">鲁公网安备 37010502000290号</a>
-        </p>鲁公网安备 37010502000290号
+        </p>
     </div>
 </div>
 
